@@ -33,18 +33,10 @@ Future<int> sumAsync(int a, int b) async {
   return completer.future;
 }
 
-const String _libName = 'ffi_ios_static';
-
 /// The dynamic library in which the symbols for [FfiIosStaticBindings] can be found.
 final DynamicLibrary _dylib = () {
-  if (Platform.isMacOS || Platform.isIOS) {
-    return DynamicLibrary.open('$_libName.framework/$_libName');
-  }
-  if (Platform.isAndroid || Platform.isLinux) {
-    return DynamicLibrary.open('lib$_libName.so');
-  }
-  if (Platform.isWindows) {
-    return DynamicLibrary.open('$_libName.dll');
+  if (Platform.isIOS) {
+    return DynamicLibrary.process();
   }
   throw UnsupportedError('Unknown platform: ${Platform.operatingSystem}');
 }();
