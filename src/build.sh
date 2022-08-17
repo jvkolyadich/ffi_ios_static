@@ -1,5 +1,5 @@
 if [ $# -ne 1 ]; then
-  echo "usage: ./build_lib.sh <CODE_SIGN_IDENTITY>"
+  echo "usage: ./build.sh <CODE_SIGN_IDENTITY>"
   exit 1
 fi
 
