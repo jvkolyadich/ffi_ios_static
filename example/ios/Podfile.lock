@@ -1,0 +1,22 @@
+PODS:
+  - ffi_ios_static (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - ffi_ios_static (from `.symlinks/plugins/ffi_ios_static/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  ffi_ios_static:
+    :path: ".symlinks/plugins/ffi_ios_static/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  ffi_ios_static: dfea1eb4d0cb279cf5d0d968d3b8c270d7d72352
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+
+PODFILE CHECKSUM: a75497545d4391e2d394c3668e20cfb1c2bbd4aa
+
+COCOAPODS: 1.11.3
