@@ -18,10 +18,16 @@ Test project to use a static library for iOS in dart
   # paths, so Classes contains a forwarder C file that relatively imports
   # `../src/*` so that the C sources can be shared among all target platforms.
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  # s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '9.0'
 
+  s.public_header_files = 'Classes/**/*.h'
+  s.static_framework = true
+
+  # s.vendored_libraries = 'Frameworks/ffi_ios_static.xcframework/ios-arm64_armv7/libffi_ios_static.a'
+  # s.vendored_libraries = 'Frameworks/ffi_ios_static.xcframework/ios-arm64_x86_64-simulator/libffi_ios_static.a'
+  
   s.vendored_frameworks = 'Frameworks/ffi_ios_static.xcframework'
 
   # Flutter.framework does not contain a i386 slice.
