@@ -28,7 +28,7 @@ Test project to use a static library for iOS in dart
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES',
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386',
-    'OTHER_LDFLAGS[sdk=iphoneos*]' => '-force_load $(PODS_TARGET_SRCROOT)/Frameworks/ffi_ios_static.xcframework/ios-arm64_armv7/libffi_ios_static.a'
+    'OTHER_LDFLAGS[sdk=iphoneos*]' => '-force_load $(PODS_TARGET_SRCROOT)/Frameworks/ffi_ios_static.xcframework/ios-arm64_armv7/libffi_ios_static.a',
     'OTHER_LDFLAGS[sdk=iphonesimulator*]' => '-force_load $(PODS_TARGET_SRCROOT)/Frameworks/ffi_ios_static.xcframework/ios-arm64_x86_64-simulator/libffi_ios_static.a'
   }
   s.swift_version = '5.0'
